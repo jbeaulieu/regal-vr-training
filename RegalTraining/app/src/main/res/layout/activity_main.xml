@@ -26,6 +26,12 @@
         android:layout_margin="10dp"
         android:text="Create your buttons below:" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aashish Nimbekar" />
+
     <!--
     * Add your personalized buttons below
     * Don't forget to commit and push your code back to GitHub once you finish!
