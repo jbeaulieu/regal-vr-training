@@ -6,29 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.regal.training.MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_margin="10dp"
-        android:text="Hello! Welcome to Android!" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:text="Create your buttons below:" />
+    tools:context="com.regal.training.MainActivity"
+    android:weightSum="1">
 
     <!--
     * Add your personalized buttons below
     * Don't forget to commit and push your code back to GitHub once you finish!
     -->
+
+    <ToggleButton
+        android:id="@+id/ExplodeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoText="false"
+        android:contentDescription="explode"
+        android:text="Explode"
+        tools:autoText="false"
+        tools:text="Explode" />
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
