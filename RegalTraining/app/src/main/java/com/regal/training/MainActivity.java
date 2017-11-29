@@ -1,5 +1,6 @@
 package com.regal.training;
 
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -80,14 +81,20 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
         if (id == R.id.nav_3dview) {
-
+            ViewerFragment viewerFragment = new ViewerFragment();
+            fragmentManager.beginTransaction().replace(R.id.defaultLayout, viewerFragment, viewerFragment.getTag()).commit();
         } else if (id == R.id.nav_assembly) {
-
+            AssemblyFragment assemblyFragment = new AssemblyFragment();
+            fragmentManager.beginTransaction().replace(R.id.defaultLayout, assemblyFragment, assemblyFragment.getTag()).commit();
         } else if (id == R.id.nav_bom) {
-
+            BomFragment bomFragment = new BomFragment();
+            fragmentManager.beginTransaction().replace(R.id.defaultLayout, bomFragment, bomFragment.getTag()).commit();
         } else if (id == R.id.nav_game) {
-
+            GameFragment gameFragment = new GameFragment();
+            fragmentManager.beginTransaction().replace(R.id.defaultLayout, gameFragment, gameFragment.getTag()).commit();
         } else if (id == R.id.nav_feedback) {
 
         } else if (id == R.id.nav_settings) {
