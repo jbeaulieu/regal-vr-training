@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/regal_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OldActivity">
-        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
