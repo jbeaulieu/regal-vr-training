@@ -1,13 +1,61 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.regal.training.AssemblyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/View1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Placeholder for Assembly videos" />
+        android:layout_height="250dp"
+        >
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/vid1_Title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Video One"
+            android:textAlignment="center" />
+
+        <VideoView
+            android:id="@+id/vidView1"
+            android:layout_below="@+id/vid1_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/vid1_Title"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="parent" />
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/View2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/View1" >
+
+        <TextView
+            android:id="@+id/vid2_Title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Video Two"
+            android:textAlignment="center" />
+
+        <VideoView
+            android:id="@+id/vidView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/vid2_Title"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
